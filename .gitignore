@@ -1,2 +1,4 @@
 hidden_note.txt
-42header
+*.cpp
+*.hpp
+.*

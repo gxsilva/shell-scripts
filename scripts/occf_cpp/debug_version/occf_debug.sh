@@ -61,33 +61,38 @@ EOL
 
 $capClass::$capClass(void)
 {
-	std::cout << "Default constructor called" << std::endl;
+	if (DEBUG)
+		std::cout << "Default constructor called" << std::endl;
 	return ;
 }
 
 //$capClass::$capClass(void) //Parameterized Constructor
 //{
-//	std::cout << "Parameterized constructor called" << std::endl;
+//	if (DEBUG)
+//		std::cout << "Parameterized constructor called" << std::endl;
 //	return ;
 //}
 
 $capClass::$capClass(const $capClass &other)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	if (DEBUG)
+		std::cout << "Copy constructor called" << std::endl;
 	(void) other;
 	return ;
 }
 
 $capClass &$capClass::operator=(const $capClass &other)
 {
-	std::cout << "Assignment operator called" << std::endl;
+	if (DEBUG)
+		std::cout << "Assignment operator called" << std::endl;
 	(void) other;
 	return (*this);
 }
 
 $capClass::~$capClass(void)
 {
-	std::cout << "Destructor called" << std::endl;
+	if (DEBUG)
+		std::cout << "Destructor called" << std::endl;
 	return ;
 }
 

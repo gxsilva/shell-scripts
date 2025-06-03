@@ -1,0 +1,3 @@
+[submodule "scripts/42header"]
+	path = scripts/42header
+	url = https://github.com/42paris/42header
