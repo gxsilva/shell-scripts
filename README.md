@@ -5,6 +5,7 @@
 ---
 
 ### Directory structure
+```pgsql
 shell-scripts/
 ├── README.md         ← General instructions and aliases to paste into .bashrc
 ├── aliases.sh        ← File that can be sourced directly in .bashrc
@@ -14,7 +15,7 @@ shell-scripts/
 │   │   └── README.md
 │
 └── LICENSE
-
+```
 ---
 
 ## 🔧 Usage
