@@ -39,6 +39,7 @@ class $capClass
 {
 	public:
 		$capClass(void);
+		//$capClass(void); //Parameterized Constructor
 
 		$capClass(const $capClass& other);
 		$capClass &operator=(const $capClass &other);
@@ -60,6 +61,12 @@ $capClass::$capClass(void)
 	std::cout << "Default constructor called" << std::endl;
 	return ;
 }
+
+//$capClass::$capClass(void) //Parameterized Constructor
+//{
+//	std::cout << "Parameterized constructor called" << std::endl;
+//	return ;
+//}
 
 $capClass::$capClass(const $capClass &other)
 {
