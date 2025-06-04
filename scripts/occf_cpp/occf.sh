@@ -32,7 +32,8 @@ do
 	cpp="$cppPath$capClass".cpp
 	# HPP
 	rm -f $hpp && touch $hpp
-	cat > $hpp << EOL
+	vim -c :Stdheader +:wq "$hpp"
+	cat >> $hpp << EOL
 #ifndef ${fcapClass}_HPP
 # define ${fcapClass}_HPP
 
@@ -55,8 +56,9 @@ class $capClass
 EOL
 
 	# CPP
-	rm -f $cpp && touch $cpp
-	cat > $cpp << EOL
+	rm -f $cpp && touch $cpp	
+	vim -c :Stdheader +:wq "$cpp"
+	cat >> $cpp << EOL
 #include "$capClass.hpp"
 
 $capClass::$capClass(void)
@@ -97,7 +99,7 @@ done
 printf "\n$# classes created:\n\n"
 for class in "$@"
 do
-	vim -c :Stdheader +:wq "$@.cpp"
-	vim -c :Stdheader +:wq "$@.hpp"
+#	vim -c :Stdheader +:wq "$@.cpp"
+#	vim -c :Stdheader +:wq "$@.hpp"
 	echo "$capClass.hpp/.cpp"
 done
